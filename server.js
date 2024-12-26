@@ -16,7 +16,14 @@ connectdb();
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(cors());
+const corsOptions = {
+  origin: "https://customizegoapackage.vercel.app", // Your frontend URL
+  methods: ["GET", "POST"], // You can add other methods as needed
+  allowedHeaders: ["Content-Type", "Authorization"], // Customize headers if needed
+};
+
+// Use CORS middleware with specific options
+app.use(cors(corsOptions));
 
 app.use("/api/booking", bookingRoutes);
 
