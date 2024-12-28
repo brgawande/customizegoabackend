@@ -18,8 +18,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: "http://localhost:5173", // Your frontend URL
-  // origin: "https://customizegoapackage.vercel.app", // Your frontend URL
+  // origin: "http://localhost:5173", // Your frontend URL
+  origin: "https://customizegoapackage.vercel.app", // Your frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"], // You can add other methods as needed
   allowedHeaders: ["Content-Type", "Authorization"], // Customize headers if needed
 };
